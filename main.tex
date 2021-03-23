@@ -102,11 +102,11 @@ Covid-19 has been a massive public health threat all around the globe. Covid-19 
 
 Sars-Cov-2 is an enveloped virus with a positive-sense RNA genome protected by a neculeoprotein. Sars-Cov-2's RNA dependent RNA polymerase transcribes two overlapping polyproteins (pp1a and pp1ab) which need to be cleaved before they are functional. the Main protease cuts at the sequence Leu-Gln/Ser-Ala-Gly  where / is the cleavage point\cite{Zhang409}. THe Leucine at position 2 has very high specificity but the preceding residues do play a role in binding but can be many different amino acids \cite{rut2020substrate}. The $M_{pro}$ makes cuts in polyprotein at 11 different sites across pp1a and pp1ab whereas no host-cell proteases are known to have the same recognition sequence making a great drug target\cite{hilgenfeld2014sars}. 
 
-The first crystal structure of the Sars-cov-2 $M_{pro}$ became available in March \cite{Zhang409} with more structures quickly following\cite{owen2020sars}\cite{jin2020structure}, it showed an extremely similar structure to the Sars-Cov $M_{pro}$ (PDB entry 2BX4)\cite{tan2005ph} at 0.53 Å RMSD for all C$\alpha$ and has a 96\% sequence identity\cite{Zhang409}. $M_{pro}$ has 3 domains. Domain I (residues 10 to 99) and domain II (residues 100 to 182) are both anti-parallel $\MakeUppercase{\beta}$-barrels with the active site in between them. The peptide Substrate binding site is labeled with different pockets where the residues bind; S4, S3, S2, and s1 (for Substrate binding site 1, etc.) leading up to the cleavage site and S1', S2' after. The corresponding substrate or inhibitor moiety that binds to S1 is labeled P1 for protein binding site 1. The catalytic residues are His41 on domain I and Cys145 on domain II. Domain II is the primary domain responsible for dimerization. Domain II and III have a long linker loop in between them. Domain III (residues 198 to 303) is also creates contacts to help stabilize the dimer and has been implicated in regulating dimerization as well as being able to allostericly regulate catalysis.
+The first crystal structure of the Sars-cov-2 $M_{pro}$ became available in March, 2020 \cite{Zhang409} with more structures quickly following\cite{owen2020sars}\cite{jin2020structure}, it showed an extremely similar structure to the Sars-Cov $M_{pro}$ (PDB entry 2BX4)\cite{tan2005ph} at 0.53 Å RMSD for all C$\alpha$ and has a 96\% sequence identity\cite{Zhang409}. $M_{pro}$ has 3 domains. Domain I (residues 10 to 99) and domain II (residues 100 to 182) are both anti-parallel $\MakeUppercase{\beta}$-barrels with the active site in between them. The peptide Substrate binding site is labeled with different pockets where the residues bind; S4, S3, S2, and s1 (for Substrate binding site 1, etc.) leading up to the cleavage site and S1', S2' after. The corresponding substrate or inhibitor moiety that binds to S1 is labeled P1 for protein binding site 1. The catalytic residues are His41 on domain I and Cys145 on domain II. Domain II is the primary domain responsible for dimerization. Domain II and III have a long linker loop in between them. Domain III (residues 198 to 303) is also creates contacts to help stabilize the dimer and has been implicated in regulating dimerization as well as being able to allostericly regulate catalysis.
 
 more domain I
 
-THe steps of the catalysis by Cys145 and His41 have been studied and detailed through quantum mechanics calculations. \cite{swiderek2020revealing}
+The steps of the catalysis by Cys145 and His41 have been studied and detailed through quantum mechanics calculations. \cite{swiderek2020revealing}
 
 more domain II
 
@@ -124,13 +124,17 @@ The coronavirus, infectious bronchitis virus was crystallized with three monomer
 
 only one monomer active
 
-The monomeric $M_{pro}$ is not active, only the dimer is active. Furthermore in Sars-Cov there has also been some evidence that in the dimer only one monomer is active at a time. 
+The monomeric $M_{pro}$ is not active, only the dimer is active. Furthermore in Sars-Cov there has also been some evidence from enzyme assays that in the dimer only one monomer is active at a time\cite{chen2006only}. 
+
+A crystal structure of Sars-Cov has also shown some asymmetries, most notably a $3_{10}$ helix forming in residues 139-141, and is believed to be a sign of inactivation. \cite{yang2003crystal}
 
 Structural porxies for activity can be looked for as well as a mode of allosteric communication between active sites.
 
 other simulations
 
 A simulation using the enhanced sampling technique Gaussian accelerated molecular dynamics was able to identify three pockets, the acitve site, a pocket at the dimer interface, and a pocket in the center of domain III. The authors observed correlated motions between domain I and domain III in monomer simulations but not the dimer simulations. Furthermore, these correlations do not change when $M_{pro}$ is bound to the inhibitor N3\cite{sztain2020elucidation}.
+
+Another study looked for sings of inactivation and found asymmetric differences primarily near the oxyanion hole. \cite{inizan2021high}
 
 conclusion
 both an APO form and bound to a substrate like inhibitor called N3. Understanding the dynamics of this protein would be a massive benefit to drug discovery efforts. Dynamics of the active sight can inform how current coumpounds can be extended to make greater contact with the protein and improve affinity. Dynamics of the full protein provide insights into additional druggable pockets and how they are allostericly coupled to the active site.
@@ -189,12 +193,40 @@ G35 & Gadgets & 13\tnote{b} \\
 
 \end{table}
 
-\begin{figure}[hbt!]
+\begin{figure}[ic1vic2-colortime]
+\centering
+\graphicspath{https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/tica_plots_06/fdis/}
+\includegraphics[width=0.6\linewidth]{fdiscolortime_ic2.pdf}
+\caption{Motions of A) monomer A and B) monomer B in Independent component 1 and 2 space colored by simulation time. Numbered points represent cluster centers}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[alignment-along-ic1]
 \centering
 \includegraphics[width=0.6\linewidth]{example-image}
-\caption{A figure example.}
+\caption{Alignment of chain B A) of cluster 46 (Red), 12 (orange), and 41 (yellow) and B) of cluster 46 (red) and the starting structure (blue)}
 \label{fig:view}
+\end{figure}
 
+\begin{figure}[alignment-linker-helix]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{Alignment of infectious bronchitis virus pdbid:2q6d.C (light blue and chain B of cluster 41 (red)}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[ic1vic3-colortime]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{Motions of A) monomer A and B) monomer B in Independent component 1 and 3 space colored by simulation time. Numbered points represent cluster centers}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[mutual-information-heatmap]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{correlated motios of residue residue pairs of A) chain A and B averaged together and B) the full dimer }
+\label{fig:view}
 \end{figure}
 
 \section*{Results}
@@ -272,5 +304,40 @@ We thank G. Harrison, B. Harper, and J. Doe for their help.
 \section*{Supplementary Material}
 
 An online supplement to this article can be found by visiting BJ Online at \url{http://www.biophysj.org}.
+
+\begin{figure}[feature-image]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{A visualization of the 2100 distances included in the filtered distances featurization}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[feature-selection]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{The Vamp-2 score of different feature options scored on the top 10 eigenvalues of the VAMP dimentionality reduction while running 20 iterations of 50:50 shuffle split cross validation}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[alignment-linker-helix]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{Alignment of chain B of cluster 48 (green) and cluster 19 (iceblue)}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[mutual-information-average]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{visualization of residue pairs with high correlation (red lines) MI over 0.35 and moderate correlation (blue) MI over 0.15 averaged between the two chains A) AND B) rotated 180 degrees}
+\label{fig:view}
+\end{figure}
+
+\begin{figure}[mutual-information-average]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image}
+\caption{visualization of residue pairs with high correlation (red lines) MI over 0.35 and moderate correlation (blue) MI over 0.15 for the dimer A) AND B) rotated 180 degrees}
+\label{fig:view}
+\end{figure}
 
 \end{document}
