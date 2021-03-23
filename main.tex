@@ -311,17 +311,20 @@ We thank G. Harrison, B. Harper, and J. Doe for their help.
 
 An online supplement to this article can be found by visiting BJ Online at \url{http://www.biophysj.org}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 % image made using starting structure: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/DESRES_protease_chainid.pdb
 % and tcl file from: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/filter_distance_01.py
 \graphicspath{ {./images/} }
-\includegraphics[width=0.6\linewidth]{fdis-visualization.png}
+% fdis-visualization.png
+\includegraphics[width=0.6\linewidth]{example-image}
 \caption{A visualization of the 2389 distances included in the filtered distances featurization}
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[feature-selection]
+\begin{figure}[h]
+feature-selection
+% figure created with: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/plot_vamp_score_04.py
 \centering
 \includegraphics[width=0.6\linewidth]{example-image}
 \caption{The Vamp-2 score of different feature options scored on the top 10 eigenvalues of the VAMP dimentionality reduction while running 20 iterations of 50:50 shuffle split cross validation}
