@@ -330,7 +330,7 @@ An online supplement to this article can be found by visiting BJ Online at \url{
 \centering
 % image made using starting structure: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/DESRES_protease_chainid.pdb
 % and tcl file from: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/filter_distance_01.py
-\graphicspath{ {./images/} }
+%\graphicspath{ {./supplemental_figures/} }
 % fdis-visualization.png
 % overleaf does not like this image for some reason
 \includegraphics[width=0.6\linewidth]{example-image}
@@ -348,21 +348,25 @@ An online supplement to this article can be found by visiting BJ Online at \url{
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[alignment-linker-helix]
+\begin{figure}  %[ht]
 \centering
+\graphicspath{ {./supplemental_figures/} }
+% green48_iceblue19.png
 \includegraphics[width=0.6\linewidth]{example-image}
 \caption{Alignment of chain B of cluster 48 (green) and cluster 19 (iceblue)}
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[mutual-information-average]
+\begin{figure}[ht]
+% mutual-information-average
 \centering
 \includegraphics[width=0.6\linewidth]{example-image}
 \caption{visualization of residue pairs with high correlation (red lines) MI over 0.35 and moderate correlation (blue) MI over 0.15 averaged between the two chains A) AND B) rotated 180 degrees}
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[mutual-information-average]
+\begin{figure}[ht]
+%mutual-information-dimer
 \centering
 \includegraphics[width=0.6\linewidth]{example-image}
 \caption{visualization of residue pairs with high correlation (red lines) MI over 0.35 and moderate correlation (blue) MI over 0.15 for the dimer A) AND B) rotated 180 degrees}
