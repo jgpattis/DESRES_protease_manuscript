@@ -127,7 +127,7 @@ A 100 $\mu$S molecular dynamics simulation of the dimer $M_{pro}$ was run by D.E
 Rare event conformational changes were found using the time-lagged independent component analysis (tica).\cite{perez2013identification,schwantes2013improvements} In order to find good internal coordinates to describe the system, or features, a few were tried and compared using the vamp-2 score.\cite{wu2020variational, scherer2019variational} Because a large number of features requires a extremely large amount of computer memory, Alpha carbon distances were filtered to select the most relevant. Distances of residue pairs which never come close to each other were filtered out, as well as distances which never change. The filtered distances (fdis) featurization includes only alpha carbon distances which had a minimum below 10 Å and a standard deviation above 0.35 Å, totaling 2389 distances. The more filtered distances (mfdis) includes only alpha carbon distances which had a minimum below 12 Å and a standard deviation above 0.30 Å, totaling 4618 distances. Feature selection was performed using the vamp-2 score\cite{wu2020variational, scherer2019variational} of the top 10 singular values of the vamp dimensionality reduction using 20 iterations of 50:50 shuffle split to avoid overfitting. This was repeated with lag times of 2, 8, and 16 ns. Multiple lag times were tested to ensure that trends were not lag time dependent, which they were not. Scores at different lag times can not be compared.\cite{husic2017note} Tica was performed on the fdis featurization with a lag time of 10 ns and using the commute map algorithm to scale the eigenvectors.\cite{noe2016commute} Tica solves the eigenvalue problem using a covariance matrix and a time-lagged covariance matrix to find rare event motions. To help interpret tica components correlations between input features, $X_i$ and the independent components, $\theta_j$, were calculated using the instantaneous, linear correlation between them written as:
 
 \begin{equation}
-\mathbf{Corr}(X_i - \mu_i, \mathbf{\theta}_j) = \frac{1}{\sigma_{X_i - \mu_i}}\sum_l \sigma_{(X_i - \mu_i)(X_l - \mu_l} \mathbf{U}_{li}    
+\mathbf{Corr}(X_i - \mu_i, \mathbf{\theta}_j) = \frac{1}{\sigma_{X_i - \mu_i}}\sum_l \sigma_{(X_i - \mu_i)(X_l - \mu_l)} \mathbf{U}_{li}    
 \end{equation}
 
 The matrix U are the eigenvectors from tica. These calculations were done using PyEMMA version 2.5.7. \cite{scherer2015pyemma}
@@ -150,7 +150,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 
 \section*{Results}
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 \centering
 % figure made with: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/tica_plot_06.py
 % raw image: raw_figures/fig_1_fdiscolortime_ic2.pdf
@@ -161,7 +161,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 % alignment-along-ic1
 % raw images: raw_figures/IC1_align_red46_orange12_yellow41.png
 % raw_figures/Red46_blueStarting.png
@@ -174,7 +174,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 \centering
 \graphicspath{ {./images/} }
 \includegraphics[width=0.6\linewidth]{blue-2Q6D-C-brown-cluster-41-better-align-2.png}
@@ -182,7 +182,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 % figure made with: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/tica_plot_06.py
 % raw image: raw_figures/fig_4_fdiscolortime_ic3.pdb
 % raw_figures/fig_4_fdiscolortime_ic3.gaffle
@@ -193,7 +193,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 % mutual-information-heatmap
 % script which creates image: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/allostery_analysis/plot_mut_info.py
 % and : https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/allostery_analysis/plot_mut_info_bothchain.py
@@ -286,7 +286,7 @@ We thank G. Harrison, B. Harper, and J. Doe for their help.
 
 An online supplement to this article can be found by visiting BJ Online at \url{http://www.biophysj.org}.
 
-\begin{figure}[ht]
+\begin{figure}[hbt!]
 \centering
 % image made using starting structure: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/DESRES_protease_chainid.pdb
 % and tcl file from: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/filter_distance_01.py
@@ -298,7 +298,7 @@ An online supplement to this article can be found by visiting BJ Online at \url{
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 %feature-selection
 % figure created with: https://github.com/jgpattis/Desres-sars-cov-2-apo-mpro/blob/master/plot_vamp_score_04.py
 \centering
@@ -308,7 +308,7 @@ An online supplement to this article can be found by visiting BJ Online at \url{
 \label{fig:view}
 \end{figure}
 
-\begin{figure}  %[ht]
+\begin{figure}  %[hbt!]
 \centering
 \graphicspath{ {./supplemental_figures/} }
 % green48_iceblue19.png
@@ -317,7 +317,7 @@ An online supplement to this article can be found by visiting BJ Online at \url{
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[hbt!]
 % mutual-information-average
 % raw images: raw_images/dmi_bothchain_35_15_view1_snap.png
 % raw_images/dmi_bothchain_35_15_view2_snap.png
@@ -329,7 +329,7 @@ An online supplement to this article can be found by visiting BJ Online at \url{
 \label{fig:view}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[hbt!]
 %mutual-information-dimer
 % raw images: raw_images/mut_info_35_15_front_good.png
 % raw_images/mut_info_35_15_back.png
