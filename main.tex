@@ -155,7 +155,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 % raw_figures/fig_1_fdiscolortime_ic2.graffle
 \includegraphics[width=0.6\linewidth]{figures/fig_1_fdiscolortime_ic2_label.png}
 \caption{Motions of A) monomer A and B) monomer B in Independent component 1 and 2 space colored by simulation time. Numbered points represent cluster centers}
-\label{fig:view}
+\label{fig:1}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -167,14 +167,14 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \centering
 \includegraphics[width=0.6\linewidth]{figures/fig2_IC1_align.png}
 \caption{Alignment of chain B A) of cluster 46 (Red), 12 (orange), and 41 (yellow) and B) of cluster 46 (red) and the starting structure (blue)}
-\label{fig:view}
+\label{fig:2}
 \end{figure}
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=0.6\linewidth]{images/blue-2Q6D-C-brown-cluster-41-better-align-2.png}
 \caption{Alignment of infectious bronchitis virus, pdbid:2q6d.C (light blue) and chain B of cluster 41 (brown)}
-\label{fig:view}
+\label{fig:3}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -184,7 +184,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \centering
 \includegraphics[width=0.6\linewidth]{figures/fig_4_fdiscolortime_ic3_label.png}
 \caption{Motions of A) monomer A and B) monomer B in Independent component 1 and 3 space colored by simulation time. Numbered points represent cluster centers}
-\label{fig:view}
+\label{fig:4}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -197,7 +197,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \centering
 \includegraphics[width=0.6\linewidth]{figures/MI_full_and_average.png}
 \caption{Correlated motions of residue residue pairs of A) chain A and B averaged together and B) the full dimer }
-\label{fig:view}
+\label{fig:5}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -209,7 +209,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \centering
 \includegraphics[width=0.6\linewidth]{images/fig_6_exposon_combined.png}
 \caption{The three largest exposons are colored in blue, grey, and red. Chain A is shown in cyan and chain B in pink. shown in A, and flipped 180 degrees in B}
-\label{fig:view}
+\label{fig:6}
 \end{figure}
 
 \begin{figure}[hbt!]
@@ -221,7 +221,7 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \centering
 \includegraphics[width=0.6\linewidth]{figures/fig_8_single_monomer_activation.png}
 \caption{Phe140 quickly moves away from 114 in chain B but not chain A. A) This is shown quantitatively and B) visually with the Starting structure (red), Phe140 (Magenta), Cluster 41 (cyan) with Phe140 (green), VAL 114:CA (black sphere), GLU 166:CA (blue sphere), Catalytic dyad (orange)}
-\label{fig:view}
+\label{fig:7}
 \end{figure}
 
 \subsection*{Discovery of slow motions}
@@ -258,10 +258,9 @@ The distance between 166 and 172 increases in the last 10 $\mu$S of chain B. Thi
 
 \section*{Discussion}
 
-The $M_{pro}$ of Sars-CoV-2 is an extremely promising drug target with several open questions. The simulation here shows many changes near the active site. The folding of the linker helix creates less space in the S4 and S5 pockets. Substrate would be less likely to bind to this conformation. Neutron diffraction revealed that Cys44 side chain is likely to be deprotonated (S-) where here it is protonated (S+)\cite{kneller2020unusual}. In chain A Cys44 stayes burried but in chain B Cys44 pushes away from its hydrophobic pocket breaking the helix from 43 to 46 this may be responcible for the change in conformation of 46 to 53 which also changes the contacts with the linker loop. The IBV linker loop did not come with a conformational change in residues 43 to 53. Alignment of many $M_{pro}$ crystal structures shows heterogeneity in the residues 43 to 53 region. \cite{jaskolski2021crystallographic} Alignment of structures crystallized at different temperatures also shows large differences in this region
+The $M_{pro}$ of Sars-CoV-2 is an extremely promising drug target with several open questions. The simulation here shows many changes near the active site and elsewhere. The folding of the linker helix creates less space in the S4 and S5 pockets. Substrate would be less likely to bind to this conformation. Neutron diffraction revealed that Cys44 side chain is likely to be deprotonated (S-) where here it is protonated (SH)\cite{kneller2020unusual}. In chain A Cys44 stays buried but in chain B Cys44 pushes away from its hydrophobic pocket breaking the helix from 43 to 46 this may be responsible for the change in conformation of 46 to 53 which also changes the contacts with the linker loop. The IBV linker loop did not come with a conformational change in residues 43 to 53. Alignment of many $M_{pro}$ crystal structures shows heterogeneity in the residues 43 to 53 region. \cite{jaskolski2021crystallographic} Alignment of structures crystallized at different temperatures also shows large differences in this region
 
-The C-termani flips away from the other protomer. The C-terminus is unresolved in many $M_{pro}$ crystal structures and is flexible in many others.\cite{jaskolski2021crystallographic} Two structures have been seen with this comformation 6xhmA and 7jkvB
-(dig into what is IC3 more)
+The C-termani of chain A flips away from chain B. The C-terminus is unresolved in many $M_{pro}$ crystal structures and is flexible in many others.\cite{jaskolski2021crystallographic} Two structures have been seen with this conformation 6xhmA and 7jkvB. The C-termini of chain A contacts the active site of chain B which would be needed for self cleavage.
 
 Correlated motions show the active site is the most dynamic part of this protein, which is not surprising, the active site needs correlated motions to cleave substrate. The motions of the active site appears to be connected to motions of many other regions of the protein. The residue 166 to 172 region of Domain II is adjacent to the active site and has been implicated in single monomer activation. The instibility in this region could also be caused by the improper protonation of residues His163 and His164, though the chain A monomer remains stable.
 
