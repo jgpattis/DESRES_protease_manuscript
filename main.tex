@@ -212,6 +212,18 @@ Distances were measured using MDtraj version 1.9.3.\cite{McGibbon2015MDTraj} Plo
 \label{fig:view}
 \end{figure}
 
+\begin{figure}[hbt!]
+% 3 10 helix change
+% script which creates image: 
+% 
+% raw images : 
+% raw_figures/fig_8_single_monomer_activation2.gaffle
+\centering
+\includegraphics[width=0.6\linewidth]{figures/fig_8_single_monomer_activation.png}
+\caption{Phe140 quickly moves away from 114 in chain B but not chain A. A) This is shown quantitatively and B) visually with the Starting structure (red), Phe140 (Magenta), Cluster 41 (cyan) with Phe140 (green), VAL 114:CA (black sphere), GLU 166:CA (blue sphere), Catalytic dyad (orange)}
+\label{fig:view}
+\end{figure}
+
 \subsection*{Discovery of slow motions}
 
 In order to find a good set of internal coordinates or features to discover rare event motions in the $M_{pro}$ a filtered set of distances was created. Distances can be good at capturing interactions between non-sequential residues and especially between domains. Distances between monomers were not considered and the two monomers were treated as two separate trajectories of the same protein. This has been done before on other large viral systems, using the multiple copies of a protein in a system to obtain better sampling.\cite{perilla2017physical, hadden2018all} Residue pairs which never came close to being in contact (minimum distance > 10 Å) were filtered out, as well as residue pairs whose distance never changed ( standard deviation of < 0.35 Å). A visualization of these distances is shown in supplemental figure 1. Loosening these cutoffs to include almost double the amount of distances lowered the vamp-2 score, indicating that these additional distances added only noise and no signal to the calculation. Using pairwise distances between every fifth residue, backbone dihedral angles, or solvent accessible surface area per residue all have lower vamp-2 scores indicating that they don't capture the rare event motions well. Including sidechain torsions in addition to backbone torsions raises the vamp-2 score, which many indicate that there are some rare event sidechain motions slower than the backbone motions.
